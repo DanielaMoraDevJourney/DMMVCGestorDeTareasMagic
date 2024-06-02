@@ -13,6 +13,6 @@ namespace DMMVCGestorDeTareasMagic.Models
         [Required(ErrorMessage = "La Descripcion es obligatoria")]
         public string? DMDescripcion { get; set; }
 
-        public ICollection<DMTarea>? DMTareas { get; set; }
+        public DMTarea? DMTarea { get; set; }
     }
 }

@@ -21,8 +21,7 @@ namespace DMMVCGestorDeTareasMagic.Controllers
         // GET: DMCategorias
         public async Task<IActionResult> Index()
         {
-            var dMMVCGestorDeTareasMagicContext = _context.DMCategoria.Include(d => d.DMTarea);
-            return View(await dMMVCGestorDeTareasMagicContext.ToListAsync());
+            return View(await _context.DMCategoria.ToListAsync());
         }
 
         // GET: DMCategorias/Details/5
@@ -34,7 +33,6 @@ namespace DMMVCGestorDeTareasMagic.Controllers
             }
 
             var dMCategoria = await _context.DMCategoria
-                .Include(d => d.DMTarea)
                 .FirstOrDefaultAsync(m => m.DMCategoriaID == id);
             if (dMCategoria == null)
             {
@@ -47,7 +45,6 @@ namespace DMMVCGestorDeTareasMagic.Controllers
         // GET: DMCategorias/Create
         public IActionResult Create()
         {
-            ViewData["DMTareaID"] = new SelectList(_context.Set<DMTarea>(), "DMTareaID", "DMDescripcion");
             return View();
         }
 
@@ -56,7 +53,7 @@ namespace DMMVCGestorDeTareasMagic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DMCategoriaID,DMNombre,DMDescripcion,DMTareaID")] DMCategoria dMCategoria)
+        public async Task<IActionResult> Create([Bind("DMCategoriaID,DMNombre,DMDescripcion")] DMCategoria dMCategoria)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +61,6 @@ namespace DMMVCGestorDeTareasMagic.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DMTareaID"] = new SelectList(_context.Set<DMTarea>(), "DMTareaID", "DMDescripcion", dMCategoria.DMTareaID);
             return View(dMCategoria);
         }
 
@@ -81,7 +77,6 @@ namespace DMMVCGestorDeTareasMagic.Controllers
             {
                 return NotFound();
             }
-            ViewData["DMTareaID"] = new SelectList(_context.Set<DMTarea>(), "DMTareaID", "DMDescripcion", dMCategoria.DMTareaID);
             return View(dMCategoria);
         }
 
@@ -90,7 +85,7 @@ namespace DMMVCGestorDeTareasMagic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DMCategoriaID,DMNombre,DMDescripcion,DMTareaID")] DMCategoria dMCategoria)
+        public async Task<IActionResult> Edit(int id, [Bind("DMCategoriaID,DMNombre,DMDescripcion")] DMCategoria dMCategoria)
         {
             if (id != dMCategoria.DMCategoriaID)
             {
@@ -117,7 +112,6 @@ namespace DMMVCGestorDeTareasMagic.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DMTareaID"] = new SelectList(_context.Set<DMTarea>(), "DMTareaID", "DMDescripcion", dMCategoria.DMTareaID);
             return View(dMCategoria);
         }
 
@@ -130,7 +124,6 @@ namespace DMMVCGestorDeTareasMagic.Controllers
             }
 
             var dMCategoria = await _context.DMCategoria
-                .Include(d => d.DMTarea)
                 .FirstOrDefaultAsync(m => m.DMCategoriaID == id);
             if (dMCategoria == null)
             {
