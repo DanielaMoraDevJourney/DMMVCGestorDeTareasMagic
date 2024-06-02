@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMMVCGestorDeTareasMagic", "DMMVCGestorDeTareasMagic\DMMVCGestorDeTareasMagic.csproj", "{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {617315E8-051A-459B-958C-5EF0D518EF99}
+	EndGlobalSection
+EndGlobal
