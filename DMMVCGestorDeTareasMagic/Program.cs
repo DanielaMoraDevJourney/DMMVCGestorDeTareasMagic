@@ -1,4 +1,8 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DMMVCGestorDeTareasMagicContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DMMVCGestorDeTareasMagicContext") ?? throw new InvalidOperationException("Connection string 'DMMVCGestorDeTareasMagicContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
