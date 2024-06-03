@@ -11,8 +11,6 @@ namespace DMMVCGestorDeTareasMagic.Models
         public string? DMNombre { get; set; }
         public string? DMDescripcion { get; set; }
 
-
-
         // Propiedad de navegación
         public DMTarea? DMTarea { get; set; }
     }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMMVCGestorDeTareasMagic", "DMMVCGestorDeTareasMagic\DMMVCGestorDeTareasMagic.csproj", "{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DMAAPIGestorDeTareasMagicVF", "..\..\DMAAPIGestorDeTareasMagicVFProject\DMAAPIGestorDeTareasMagicVF\DMAAPIGestorDeTareasMagicVF\DMAAPIGestorDeTareasMagicVF.csproj", "{8F1E153D-8F92-4292-93CB-B266B8119D1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA02DF8-7BD7-423E-AC0B-3EA93F387D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1E153D-8F92-4292-93CB-B266B8119D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1E153D-8F92-4292-93CB-B266B8119D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1E153D-8F92-4292-93CB-B266B8119D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1E153D-8F92-4292-93CB-B266B8119D1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
